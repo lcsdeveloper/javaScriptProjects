@@ -1,0 +1,117 @@
+/*=====================================================================*/
+/*Lucas Souza
+/*=====================================================================*/
+/* ||  << Indicates the main topic of a division/
+
+
+/*====================================================================*/
+/*||General Styles */
+/*=================*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    align-items: center;
+    background-color: #3b6978;
+    color: #ffff;
+    display: flex;
+    font-family: 'Lato', sans-serif;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+}
+
+/*====================================================================*/
+/*||Classes Styles */
+/*=================*/
+
+.movie-container {
+    margin: 20px 0;
+}
+
+.movie-container select {
+     /*these three lines are to set the appearance in every web browser to none*/
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    /***************************/
+    background-color: #fff;
+    border: 0;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    margin-left: 10px;
+    padding: 5px 15px;
+}
+
+.showcase {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    color: #777;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;/*get rid of the bullets points*/
+    padding: 5px 10px;
+}
+.showcase .seat:not(.occupied):hover{
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase li {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 5px 25px;
+}
+
+.showcase li small{
+    margin: 5px;
+}
+
+.screen {
+    
+}
+
+.seat {
+    background-color: #444451;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 25px;
+    margin: 5px;
+    width: 28px;
+}
+
+.seat.selected {
+    background-color: #6feaf6;
+}
+
+.seat.occupied{
+    background-color: #fff;
+}
+
+/*
+making space between the seats 
+as they were a corridor on the cinema
+*/
+.seat:nth-of-type(2){
+    margin-right: 28px;
+}
+
+.seat:nth-last-of-type(2){
+    margin-left: 28px;
+}
+/*******************************/
+
+
+.seat:not(.occupied):hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.row{
+    display: flex;
+}
+
