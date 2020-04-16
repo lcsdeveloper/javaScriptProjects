@@ -15,7 +15,7 @@
 
 body{
     align-items: center;
-    background-color: #3b6978;
+    background-color: #30475e;
     color: #ffff;
     display: flex;
     font-family: 'Lato', sans-serif;
@@ -71,12 +71,22 @@ body{
     margin: 5px;
 }
 
+.container {
+    margin-bottom: 30px;
+    perspective: 1000px; /*it give a 3D perspective for the container*/
+}
+
 .screen {
-    
+    background-color: #fff;
+    height: 120px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg); /*it gives to the screen the effect of being ranged*/
+    box-shadow: 0 3px 25px rgba(255, 255, 255, 0.7);
 }
 
 .seat {
-    background-color: #444451;
+    background-color: #5f6769;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     height: 25px;
@@ -109,9 +119,15 @@ as they were a corridor on the cinema
 .seat:not(.occupied):hover{
     cursor: pointer;
     transform: scale(1.2);
+    border: 1px solid #e9e5dd;
 }
 
 .row{
     display: flex;
 }
 
+
+p.text span{
+    color: #61f2f5;
+    padding:  0 5px;
+}
