@@ -9,11 +9,11 @@
 /*=================*/
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
+body {
     align-items: center;
     background-color: #30475e;
     color: #ffff;
@@ -33,7 +33,7 @@ body{
 }
 
 .movie-container select {
-     /*these three lines are to set the appearance in every web browser to none*/
+    /*these three lines are to set the appearance in every web browser to none*/
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -52,10 +52,12 @@ body{
     color: #777;
     display: flex;
     justify-content: space-between;
-    list-style-type: none;/*get rid of the bullets points*/
+    list-style-type: none;
+    /*get rid of the bullets points*/
     padding: 5px 10px;
 }
-.showcase .seat:not(.occupied):hover{
+
+.showcase .seat:not(.occupied):hover {
     cursor: default;
     transform: scale(1);
 }
@@ -67,13 +69,14 @@ body{
     margin: 5px 25px;
 }
 
-.showcase li small{
+.showcase li small {
     margin: 5px;
 }
 
 .container {
     margin-bottom: 30px;
-    perspective: 1000px; /*it give a 3D perspective for the container*/
+    perspective: 1000px;
+    /*it give a 3D perspective for the container*/
 }
 
 .screen {
@@ -81,7 +84,8 @@ body{
     height: 120px;
     width: 100%;
     margin: 15px 0;
-    transform: rotateX(-45deg); /*it gives to the screen the effect of being ranged*/
+    transform: rotateX(-45deg);
+    /*it gives to the screen the effect of being ranged*/
     box-shadow: 0 3px 25px rgba(255, 255, 255, 0.7);
 }
 
@@ -98,7 +102,7 @@ body{
     background-color: #6feaf6;
 }
 
-.seat.occupied{
+.seat.occupied {
     background-color: #fff;
 }
 
@@ -106,28 +110,29 @@ body{
 making space between the seats 
 as they were a corridor on the cinema
 */
-.seat:nth-of-type(2){
+.seat:nth-of-type(2) {
     margin-right: 28px;
 }
 
-.seat:nth-last-of-type(2){
+.seat:nth-last-of-type(2) {
     margin-left: 28px;
 }
+
 /*******************************/
 
 
-.seat:not(.occupied):hover{
+.seat:not(.occupied):hover {
     cursor: pointer;
     transform: scale(1.2);
     border: 1px solid #e9e5dd;
 }
 
-.row{
+.row {
     display: flex;
 }
 
 
-p.text span{
+p.text span {
     color: #61f2f5;
-    padding:  0 5px;
+    padding: 0 5px;
 }
