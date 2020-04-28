@@ -10,11 +10,13 @@ const seats = document.querySelectorAll( '.row .seat:not(.occupied )' );
 const count = document.getElementById( 'count' );
 const total = document.getElementById( 'total' );
 const movieSelect = document.getElementById( 'movie' );
-let ticketPrice = +movieSelect.value; //changin it for number with +
 
-
+/**
+ * *Populating the UI at the beggining 
+ */
 populateUI();
 
+let ticketPrice = +movieSelect.value; //changin it for number with +
 
 /**
  * *Save selected movie index and price
