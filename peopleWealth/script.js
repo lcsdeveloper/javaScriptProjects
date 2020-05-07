@@ -9,8 +9,6 @@ const calcWealthBtn = document.getElementById( 'calc-wealth' );
 
 let data = [];
 
-getRandomUser();
-
 // fetch random user and add money
 async function getRandomUser() {
     //accesing the api
@@ -28,8 +26,8 @@ async function getRandomUser() {
         name: `${user.name.first} ${user.name.last}`,
         money: Math.floor( Math.random() * 1000000 )
     };
-    
-    addData(newUser);
+
+    addData( newUser );
 
     //a small test :)
     // const user = data.results[ 0 ];
@@ -38,6 +36,30 @@ async function getRandomUser() {
 }
 
 //add new obj to data arr
-function addData(obj){
-    data.push(obj);
+function addData( obj ) {
+    data.push( obj );
+
+    updateDOM();
 }
+
+//update DOM
+function updateDOM( providedData = data ) {
+    //cleaning main div
+    main.innerHTML = '<h2><span>Person</span> Wealth</h2>';
+
+    providedData.forEach( person => {
+        const element = document.createElement( 'div' );
+        element.classList.add( 'person' );
+        element.innerHTML = `<span>${person.name}</span> ${formatMoney(person.money) }`;
+        main.appendChild(element);
+    } );
+}
+
+//format number as money
+function formatMoney(number){
+    return '€ '+number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+}
+
+//event listeners
+addUserBtn.addEventListener('click', getRandomUser);
+
