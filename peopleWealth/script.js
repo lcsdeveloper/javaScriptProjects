@@ -35,6 +35,14 @@ async function getRandomUser() {
     // console.log( email );
 }
 
+//double everyone money
+function doubleMoney(){
+    data = data.map(person => {
+        return {...person, money: person.money *2};
+    });
+    updateDOM();
+}
+
 //add new obj to data arr
 function addData( obj ) {
     data.push( obj );
@@ -51,15 +59,16 @@ function updateDOM( providedData = data ) {
         const element = document.createElement( 'div' );
         element.classList.add( 'person' );
         element.innerHTML = `<span>${person.name}</span> ${formatMoney(person.money) }`;
-        main.appendChild(element);
+        main.appendChild( element );
     } );
 }
 
 //format number as money
-function formatMoney(number){
-    return '€ '+number.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+function formatMoney( number ) {
+    return '€ ' + number.toFixed( 2 ).replace( /\d(?=(\d{3})+\.)/g, '$&,' );
 }
 
 //event listeners
-addUserBtn.addEventListener('click', getRandomUser);
+addUserBtn.addEventListener( 'click', getRandomUser );
 
+doubleMoneyBtn.addEventListener( 'click',doubleMoney );
