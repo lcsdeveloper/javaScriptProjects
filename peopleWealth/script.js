@@ -2,7 +2,7 @@
 const main = document.getElementById( 'main' );
 const addUserBtn = document.getElementById( 'add-user' );
 const doubleMoneyBtn = document.getElementById( 'double-money' );
-const showMillionairesBtn = document.getElementById( 'show-miollionaries' );
+const showMillionairesBtn = document.getElementById( 'show-millionaires' );
 const sortRichestBtn = document.getElementById( 'sort-richest' );
 const calcWealthBtn = document.getElementById( 'calc-wealth' );
 
@@ -45,10 +45,18 @@ function doubleMoney() {
     } );
     updateDOM();
 }
-//sort users 
-function sortByRichest(){
-    
-    data.sort((userA, userB)=> userB.money - userA.money);
+
+//sort users by the richest
+function sortByRichest() {
+
+    data.sort( ( person, personB ) => personB.money - person.money );
+
+    updateDOM();
+}
+
+function showMillionaries() {
+
+    data = data.filter( person => person.money > 1000000 );
 
     updateDOM();
 }
@@ -81,4 +89,6 @@ function formatMoney( number ) {
 //event listeners
 addUserBtn.addEventListener( 'click', getRandomUser );
 doubleMoneyBtn.addEventListener( 'click', doubleMoney );
-sortRichestBtn.addEventListener('click', sortByRichest);
+sortRichestBtn.addEventListener( 'click', sortByRichest );
+showMillionairesBtn.addEventListener( 'click', showMillionaries );
+
