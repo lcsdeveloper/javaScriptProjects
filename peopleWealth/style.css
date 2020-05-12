@@ -68,7 +68,8 @@ span {
 
 h3{
     background-color: #fff;
-    border-bottom: 1px solid #bebebe;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
     display: flex;
     font-weight: 300;
     justify-content: space-between;
