@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <title>Tibia Task Calculator</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="card-experience">
+
+            <form class="form-experience" id="form-experience">
+
+                <div class="experience-control">
+                    <label for="level">Level 50 to 79</label>
+                    <input type="text" name="level" id="level">
+                </div>
+
+                <div class="experience-control">
+                    <label for="experience">Experience</label>
+                    <input type="text" name="experience" id="experience">
+                </div>
+
+                <div class="experience-control">
+                    <label>New Level</label>
+                    <input type="text" id="new-level">
+                </div>
+
+                <div class="experience-control">
+                    <input type="submit" value="submit">
+                </div>
+
+                <div class="experience-control">
+                    <label class="line-top">New Experience</label>
+                    <input type="text" id="new-experience" readonly>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="card-task">
+
+            <form class="task-experience" id="task-experience">
+                <div class="task-control">
+                    <label for="task">Task level 50 to 79</label>
+                    <select name="task" id="task">
+                        <option value="mutated-rat">Mutated-rat</option>
+                        <option value="mutated-tiger">Mutated Tiger</option>
+                        <option value="ancient-scarab">Ancient Scarab</option>
+                        <option value="bonebest">Bone Best</option>
+                        <option value="frost-Golem">Frost Golem</option>
+                    </select>
+                </div>
+
+                <div class="task-control">
+                    <label for="quantity">Quantity</label>
+                    <select name="quantity" id="quantity">
+                        <option value="250">250</option>
+                        <option value="300">300</option>
+                        <option value="400">400</option>
+                    </select>
+                </div>
+
+                <div class="task-control">
+                    <label for="task-points">Task Points</label>
+                    <select name="task-points" id="task-points">
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+
+                <div class="task-control">
+                    <input type="submit" value="submit">
+                </div>
+
+                <div class="task-control">
+                    <label class="line-top">Experience task</label>
+                    <input type="text" id="exp-after-task" readonly>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
