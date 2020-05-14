@@ -5,7 +5,7 @@
     padding: 0;
 }
 
-body {    
+body {
     align-items: center;
     background-image: url(tibia.jpg);
     background-repeat: no-repeat;
@@ -17,19 +17,29 @@ body {
     flex-direction: column;
 }
 
+small {
+    visibility: hidden;
+}
+
+small.error  {
+    visibility: visible;
+    color: red;
+}
+
+
 .container {
     align-items: center;
     background-color: #d8d8d8c7;
     border-radius: 5px;
     display: flex;
-    flex-direction: row;    
+    flex-direction: row;
     height: 350px;
     justify-content: center;
     width: 550px;
     padding: 0 20px;
 }
 
-.card-experience{
+.card-experience {
     border: solid 1px #c70039;
     border-radius: 5px;
     margin-right: 20px;
@@ -37,14 +47,14 @@ body {
     width: 50%;
 }
 
-.card-task{
+.card-task {
     border: solid 1px #c70039;
     border-radius: 5px;
     padding: 10px;
     width: 50%;
 }
 
-label{
+label {
     color: #c70039;
     display: block;
     font-size: 1.1rem;
@@ -54,11 +64,12 @@ label{
 }
 
 /*this class gives a line on top of the element*/
-.line-top{
+.line-top {
     border-top: 1px solid #c70039;
 }
 
-input, select{
+input,
+select {
     display: inline-block;
     width: 150px;
     border: solid 1px #fff;
@@ -69,12 +80,14 @@ select {
     width: 120px;
 }
 
-#level, #new-level, #task-points {
+#level,
+#new-level,
+#task-points {
     width: 40px;
 }
 
-input[type=submit]{
-    color:#fff;
+input[type=submit] {
+    color: #fff;
     padding: 5px;
     font-size: 1rem;
     background-color: #c70039;
@@ -82,7 +95,7 @@ input[type=submit]{
     margin: 10px 0;
 }
 
-input[type=submit]:hover{
-transform: scale(1.03);
-background-color: #d4426b;
+input[type=submit]:hover {
+    transform: scale(1.03);
+    background-color: #d4426b;
 }
