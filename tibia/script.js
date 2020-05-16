@@ -1,3 +1,4 @@
+//formExperinces variables
 const formExperience = document.getElementById( 'form-experience' );
 const level = document.getElementById( 'level' );
 const experience = document.getElementById( 'experience' );
@@ -49,6 +50,14 @@ const levelsTable = [ {
     },
 ];
 
+//form-task variables
+const formTask = document.getElementById('task-experience');
+const typeOfTask = document.getElementById('task');
+const taskQuantity = document.getElementById('quantity');
+const taskPoint = document.getElementById('task-points');
+const experienceAfterTask = document.getElementById('exp-after-task');
+
+//form experience functions
 function cheakLevel( level, newLevel ) {
 
     levelsTable.map( obj => {
@@ -84,10 +93,21 @@ function cheakInput() {
             element.className = 'error';
         } );
     }
-
 }
 
+//form task functions
+function calculateExperience(typeOfTask, taskQuantity){
+    experienceAfterTask.value = typeOfTask*taskQuantity;
+}
+//event listiners 
 formExperience.addEventListener( 'submit', function ( e ) {
     e.preventDefault();
     cheakInput( level.value.trim(), newLevel.value.trim() );
 } );
+
+formTask.addEventListener('submit', e =>{
+    e.preventDefault();
+
+    calculateExperience(typeOfTask.value, taskQuantity.value);
+
+});
