@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Hotel Check-In</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>Hotel Check-In</h1>
+
+        <div class="container-form-display">
+
+            <form id="form-details" class="form-details" action="#">
+                <div class="control-details">
+                    <label for="name">Name</label>
+                </div>
+
+                <div class="control-details">
+                    <input type="text" name="name" id="name">
+                </div>
+
+                <div class="control-details">
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="control-details">
+                    <input type="email" name="email" id="email">
+                </div>
+
+                <div class="control-details">
+                    <label for="room-type">Room Type</label>
+                </div>
+
+                <div class="control-details">
+                    <select name="room-type" id="room-type">
+                        <option value="single">single</option>
+                        <option value="double">double</option>
+                        <option value="presidential">presidential</option>
+                    </select>
+                </div>
+
+                <div class="control-details">
+                    <label for="number-guest">Number of Guests</label>
+                </div>
+
+                <div class="control-details">
+                    <input type="number" name="number-guest" id="number-guest">
+                </div>
+
+                <div class="control-details">
+                    <label for="arrival">Arrival Data</label>
+                </div>
+
+                <div class="control-details">
+                    <input type="date" name="arrival" id="arrival">
+                </div>
+
+                <div class="control-details">
+                    <label for="departure">departure Data</label>
+                </div>
+
+                <div class="control-details">
+                    <input type="date" name="departure" id="departure">
+                </div>
+
+                <div class="control-details">
+                    <input type="submit" value="submit">
+                </div>
+            </form>
+
+
+            <div class="form-display">
+
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>
